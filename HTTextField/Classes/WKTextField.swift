@@ -65,6 +65,8 @@ public struct WKTextFieldCodeVerifyConfig{
     public var focusNormalColor = UIColor.clear
     //聚焦borderWidth
     public var focusBoderWidth:CGFloat = 2.0
+    //
+    public var backgroundColor:UIColor = WKColor.kRGBColorFromHex(rgbValue: 0xFFFFFF)
 }
 
 //config
@@ -96,7 +98,6 @@ public class WKTextField: UIView, UITextFieldDelegate {
     public var codeTemplateLabel:BaseCodeLabel = BaseCodeLabel()
     //代理
     public var delegate:WKTextFieldDelegate?
-    
     //出错条件
     public var errorFilter:((String)->(Bool))?
     //出错标示
@@ -144,7 +145,10 @@ public class WKTextField: UIView, UITextFieldDelegate {
             spacing = (width - CGFloat(fixWidth) * CGFloat(inputCount))/CGFloat((inputCount-1))
         }
         assert(spacing > 0, "请更改fixWidth 或则 inputNum")
-
+        self.baseView.snp.remakeConstraints({ (make) in
+            make.edges.equalToSuperview()
+        })
+        
         for index in 0..<count {
             let label =  codeTemplateLabel.createLabel()
             
@@ -211,6 +215,7 @@ public class WKTextField: UIView, UITextFieldDelegate {
                     self.underLine.isHidden = true
                     self.baseView.isHidden = false
                     self.textField.placeholder = ""
+                    self.baseView.backgroundColor = config.codeVerifyConfig.backgroundColor
             }
         }
     }
@@ -242,7 +247,7 @@ public class WKTextField: UIView, UITextFieldDelegate {
         self.underLine.backgroundColor = self.config.phoneConfig.NormalLineColor
         
         self.baseView = UIView()
-        self.baseView.backgroundColor = .white
+        self.baseView.backgroundColor = self.config.codeVerifyConfig.backgroundColor
         
         self.addSubview(self.textField)
         self.addSubview( self.underLine)
@@ -252,9 +257,6 @@ public class WKTextField: UIView, UITextFieldDelegate {
     
     override public func updateConstraints() {
         if !isConstraints {
-            self.baseView.snp.makeConstraints({ (make) in
-                make.edges.equalToSuperview()
-            })
             
             self.textField.snp.remakeConstraints({ (make) in
                 make.top.equalToSuperview()
@@ -279,7 +281,11 @@ public class WKTextField: UIView, UITextFieldDelegate {
     }
     
     override public func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
-        return self.textField
+        if self.config.type == .kCodeVerify{
+            return self.textField
+        }else{
+            return super.hitTest(point, with: event)
+        }
     }
     
 //shack 开始
@@ -329,12 +335,16 @@ public class WKTextField: UIView, UITextFieldDelegate {
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         self.shakeEnd()
         if self.config.type == .kCodeVerify {
-            let currentIndex = textField.text?.count
+            var currentIndex = textField.text?.count
+            if currentIndex == self.config.codeVerifyConfig.inputNum{
+                currentIndex = self.config.codeVerifyConfig.inputNum - 1
+            }
+            
             for (index, label) in self.baseView.subviews.enumerated(){
                 if currentIndex == index {
                     label.layer.borderWidth = config.codeVerifyConfig.focusBoderWidth
                     label.layer.borderColor = config.codeVerifyConfig.focusColor.cgColor
-                    }else{
+                }else{
                     label.layer.borderWidth = config.codeVerifyConfig.focusBoderWidth
                     label.layer.borderColor = config.codeVerifyConfig.focusNormalColor.cgColor
                 }

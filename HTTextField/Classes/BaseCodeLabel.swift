@@ -8,15 +8,15 @@
 
 import UIKit
 
-public class BaseCodeLabel:UILabel{
-    override init(frame: CGRect) {
+open class BaseCodeLabel:UILabel{
+    public override init(frame: CGRect) {
         super.init(frame: frame)
     }
     required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func createLabel()->UILabel{
+    open func createLabel()->UILabel{
         let label:BaseCodeLabel = BaseCodeLabel()
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 18)
@@ -24,11 +24,11 @@ public class BaseCodeLabel:UILabel{
         return label;
     }
     
-    public func setErrorColor(){
+    open func setErrorColor(){
 
     }
     
-    public func setNormalColor(){
+    open func setNormalColor(){
     
     }
 }

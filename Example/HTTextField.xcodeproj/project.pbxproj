@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5B741B209AB498005CD5D9 /* CustomCodeVerifyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5B741A209AB498005CD5D9 /* CustomCodeVerifyLabel.swift */; };
 		4EC39AFDDF4385BE54C389BE /* Pods_HTTextField_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B2778622D9F3011AFCDB37 /* Pods_HTTextField_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C5B741A209AB498005CD5D9 /* CustomCodeVerifyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCodeVerifyLabel.swift; sourceTree = "<group>"; };
 		240214588020565531585176 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		24F61F763EB7BCF383CCF505 /* Pods-HTTextField_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTextField_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTTextField_Tests/Pods-HTTextField_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		4597BC8279C0D2108FFFD576 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		607FACD21AFB9204008FA782 /* Example for HTTextField */ = {
 			isa = PBXGroup;
 			children = (
+				0C5B741A209AB498005CD5D9 /* CustomCodeVerifyLabel.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -372,6 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C5B741B209AB498005CD5D9 /* CustomCodeVerifyLabel.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
