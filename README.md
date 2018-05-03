@@ -5,7 +5,15 @@
 [![License](https://img.shields.io/cocoapods/l/HTTextField.svg?style=flat)](https://cocoapods.org/pods/HTTextField)
 [![Platform](https://img.shields.io/cocoapods/p/HTTextField.svg?style=flat)](https://cocoapods.org/pods/HTTextField)
 
+## Screenshot
+<div align="center">
+<img src="http://sberrevoets.github.io/SDCAlertView/ActionSheet.gif">
+<img src="http://sberrevoets.github.io/SDCAlertView/Alert.gif">
+</div>
+
+
 ## Example
+
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
