@@ -28,9 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		240214588020565531585176 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		240214588020565531585176 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		24F61F763EB7BCF383CCF505 /* Pods-HTTextField_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTextField_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTTextField_Tests/Pods-HTTextField_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4597BC8279C0D2108FFFD576 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4597BC8279C0D2108FFFD576 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* HTTextField_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HTTextField_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		6C80BDE400F178A02312BAB9 /* Pods-HTTextField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTextField_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HTTextField_Example/Pods-HTTextField_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		82B2778622D9F3011AFCDB37 /* Pods_HTTextField_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HTTextField_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7AE27B66F4ADD9DCA03BE3F /* Pods-HTTextField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HTTextField_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-HTTextField_Example/Pods-HTTextField_Example.release.xcconfig"; sourceTree = "<group>"; };
-		FD9D4D0C4D93B2BF208E426A /* HTTextField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = HTTextField.podspec; path = ../HTTextField.podspec; sourceTree = "<group>"; };
+		FD9D4D0C4D93B2BF208E426A /* HTTextField.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = HTTextField.podspec; path = ../HTTextField.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,10 +272,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HTTextField_Example/Pods-HTTextField_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/HTTextField/HTTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HTTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -1,0 +1,19 @@
+PODS:
+  - HTTextField (0.1.0):
+    - SnapKit (~> 4.0.0)
+  - SnapKit (4.0.0)
+
+DEPENDENCIES:
+  - HTTextField (from `../HTTextField.podspec`)
+
+EXTERNAL SOURCES:
+  HTTextField:
+    :path: ../HTTextField.podspec
+
+SPEC CHECKSUMS:
+  HTTextField: f852df458e156eb8b73a8656cd1595e646166070
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+
+PODFILE CHECKSUM: 171ccc2e5bc11ca7e0728d82110a6b895cc2c422
+
+COCOAPODS: 1.4.0

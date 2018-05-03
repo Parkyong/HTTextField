@@ -1,0 +1,6 @@
+framework module Pods_HTTextField_Example {
+  umbrella header "Pods-HTTextField_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,12 +7,27 @@
 //
 
 import UIKit
+import HTTextField
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, WKTextFieldDelegate{
+    
+    let account: WKTextField = WKTextField(frame: CGRect(x: 10, y: 20, width: UIScreen.main.bounds.size.width-20, height: 50))
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.view.addSubview(account)
+        account.config = WKTextFieldConfig()
+        account.delegate = self as WKTextFieldDelegate
+        account.config.type = .kCodeVerify
+        account.config.codeVerifyConfig.inputNum = 6
+        account.codeTemplateLabel = BaseCodeLabel()
+        account.errorFilter = {
+            (text:String)->Bool in
+            return true
+        }
+        account.updateViews()
+
     }
 
     override func didReceiveMemoryWarning() {

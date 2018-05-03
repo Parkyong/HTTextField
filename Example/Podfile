@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'HTTextField_Example' do
-  pod 'HTTextField', :path => '../'
+  pod 'HTTextField', :path => '../HTTextField.podspec'
 
   target 'HTTextField_Tests' do
     inherit! :search_paths

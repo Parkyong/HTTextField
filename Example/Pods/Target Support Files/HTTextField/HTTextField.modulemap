@@ -1,0 +1,6 @@
+framework module HTTextField {
+  umbrella header "HTTextField-umbrella.h"
+
+  export *
+  module * { export * }
+}
