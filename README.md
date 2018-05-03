@@ -7,8 +7,8 @@
 
 ## Screenshot
 <div align="center">
-<img src="https://github.com/Parkyong/HTTextField/blob/master/input.jpg">
-<img src="https://github.com/Parkyong/HTTextField/blob/master/code.jpg">
+<img src="https://github.com/Parkyong/HTTextField/blob/master/input.jpg" width="300px" height="auto">
+<img src="https://github.com/Parkyong/HTTextField/blob/master/code.jpg" width="300px" height="auto">
 </div>
 
 
