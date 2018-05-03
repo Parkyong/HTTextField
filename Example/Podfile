@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'HTTextField_Example' do
+  pod 'HTTextField', :path => '../'
+
+  target 'HTTextField_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
