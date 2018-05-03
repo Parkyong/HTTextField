@@ -7,8 +7,8 @@
 
 ## Screenshot
 <div align="center">
-<img src="http://sberrevoets.github.io/SDCAlertView/ActionSheet.gif">
-<img src="http://sberrevoets.github.io/SDCAlertView/Alert.gif">
+<img src="https://github.com/Parkyong/HTTextField/blob/master/input.jpg">
+<img src="https://github.com/Parkyong/HTTextField/blob/master/code.jpg">
 </div>
 
 
